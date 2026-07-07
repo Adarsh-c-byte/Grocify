@@ -9,7 +9,7 @@ const Category = () => {
   const renderCard = category.map((Card) => {
     return (
       // Card
-      <div className="flex-1">
+      <div className="flex-1" key={Card.id}>
 
         {/* Card Image */}
         <div className="w-full min-h-[30vh]  relative -mb-10">
