@@ -9,7 +9,7 @@ import basket from "../../assets/basket-full-vegetables.png";
 const Values = () => {
   const leftValues = value.slice(0, 2).map((item) => {
     return (
-      <div className="flex md:flex-row-reverse justify-between md:items-center gap-7">
+      <div key={item.id} className="flex md:flex-row-reverse justify-between md:items-center gap-7">
         <div>
           <span className="flex justify-center items-center bg-gradient-to-b from-orange-400 to-orange-500 md:h-14 md:w-14 h-12 w-12 rounded-full text-white ">{item.icon}</span>
         </div>
@@ -23,7 +23,7 @@ const Values = () => {
 
   const rightValues = value.slice(2, 4).map((item) => {
     return (
-      <div className="flex justify-between md:items-center gap-7">
+      <div key={item.id} className="flex justify-between md:items-center gap-7" >
         <div>
           <span className="flex justify-center items-center bg-gradient-to-b from-orange-400 to-orange-500 md:h-14 md:w-14 h-12 w-12 rounded-full text-white ">{item.icon}</span>
         </div>
