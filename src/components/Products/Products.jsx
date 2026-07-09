@@ -7,8 +7,8 @@ const Products = () => {
   const categories = ["All", "Fruit", "vegetable", "Dairy", "Sea Food"];
   const [activeTag, setActiveTag] = useState("All");
 
-  const renderCard = ProductList.map((product) => {
-    return <Card image={product.image} title={product.title} price={product.price}  />;
+  const renderCard = ProductList.slice(0,8).map((product) => {
+    return <Card image={product.image} title={product.title} price={product.price} key={product.id}  />;
   });
 
   return (
@@ -33,7 +33,7 @@ const Products = () => {
 
         {/* Product Listing */}
 
-        <div className="grid grid-cols-4 gap-9 mt-20">{renderCard}</div>
+        <div className="grid grid-cols-4 gap-5 mt-15">{renderCard}</div>
       </div>
     </section>
   );
