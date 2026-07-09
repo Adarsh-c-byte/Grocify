@@ -199,4 +199,4 @@ const productList = [
   },
 ];
 
-export default product
+export default productList
