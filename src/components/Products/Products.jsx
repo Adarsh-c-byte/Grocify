@@ -2,13 +2,24 @@ import React, { useState } from "react";
 import Headings from "../Headings/Headings";
 import ProductList from "../ProductList/ProductList";
 import Card from "../Card/Card";
+import Button from "../Button/Button";
 
 const Products = () => {
-  const categories = ["All", "Fruit", "vegetable", "Dairy", "Sea Food"];
+  const categories = ["All", "Fruit", "Vegetable", "Dairy", "Sea Food"];
   const [activeTag, setActiveTag] = useState("All");
 
-  const renderCard = ProductList.slice(0,8).map((product) => {
-    return <Card image={product.image} title={product.title} price={product.price} key={product.id}  />;
+  let filterLists = activeTag === 'All' 
+  ? ProductList : ProductList.filter(item=>item.category === activeTag)
+
+  const renderCard = filterLists.slice(0, 8).map((product) => {
+    return (
+      <Card
+        image={product.image}
+        title={product.title}
+        price={product.price}
+        key={product.id}
+      />
+    );
   });
 
   return (
@@ -34,6 +45,10 @@ const Products = () => {
         {/* Product Listing */}
 
         <div className="grid grid-cols-4 gap-5 mt-15">{renderCard}</div>
+
+        <div className="mt-15 mx-auto w-fit">
+          <Button content="View All" />
+        </div>
       </div>
     </section>
   );
