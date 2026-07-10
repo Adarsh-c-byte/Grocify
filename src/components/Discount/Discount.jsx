@@ -6,16 +6,16 @@ const Discount = () => {
   return (
     <section className='bg-zinc-200 bg-contain bg-no-repeat bg-right' style={{backgroundImage:`url(${FreshFruit})`}}>
 
-        <div className='flex max-w-[1400px] mx-auto px-10 py-10'>
+        <div className='md:bg-transparent bg-zinc-200 flex md:flex-row flex-col max-w-[1400px] mx-auto px-10 py-10'>
 
             <span 
-               className='text-9xl text-orange-500 font-bold transform -rotate-90 h-fit self-center'>
+               className='md:text-9xl text-6xl text-orange-500 font-bold transform md:-rotate-90 h-fit md:self-center'>
                 20%
             </span>
 
             <div className='max-w-[700px]'>
 
-                <h3 className='text-7xl font-bold text-zinc-800'>
+                <h3 className='md:text-7xl text-4xl font-bold text-zinc-800'>
                     First Order Discount!
                 </h3>
 

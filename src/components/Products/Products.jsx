@@ -27,7 +27,7 @@ const Products = () => {
       <div className="max-w-[1400px] mx-auto px-10 py-20">
         <Headings highlight="Our" headings=" Products" />
 
-        <div className="flex justify-center gap-5 mt-10">
+        <div className="flex flex-wrap justify-center gap-5 mt-10">
           {categories.map((category) => {
             return (
               <button
@@ -44,7 +44,7 @@ const Products = () => {
 
         {/* Product Listing */}
 
-        <div className="grid grid-cols-4 gap-5 mt-15">{renderCard}</div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-15">{renderCard}</div>
 
         <div className="mt-15 mx-auto w-fit">
           <Button content="View All" />
