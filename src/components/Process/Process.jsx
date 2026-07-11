@@ -14,18 +14,18 @@ import { RiVerifiedBadgeFill } from "react-icons/ri";
 const Process = () => {
   const renderSteps = steps.map((item) => {
     return (
-      <div className={`flex-1 ${item.id % 2 === 0 ? '-mt-50' : ''}`}>
-        <span className="flex justify-center items-center h-16 w-16 text-7xl text-white bg-zinc-800 rounded-full outline-dashed outline-zinc-800 outline-offset-7 mx-auto">{item.number}</span>
+      <div className={`flex-1 ${item.id % 2 === 0 ? 'md:-mt-50' : ''}`}>
+        <span className="flex justify-center items-center md:h-16 md:w-16 h-13 w-13 md:text-7xl text-6xl text-white bg-zinc-800 rounded-full outline-dashed outline-zinc-800 outline-offset-7 mx-auto">{item.number}</span>
 
         <div className="flex items-center mt-6 gap-5">
 
        
-            <span className="flex justify-center items-center text-3xl text-white p-4 rounded-full bg-gradient-to-b from-orange-400 to-orange-600">{item.icon}</span>
+            <span className="flex justify-center items-center md:text-3xl text-2xl text-white md:p-4 p-3 rounded-full bg-gradient-to-b from-orange-400 to-orange-600">{item.icon}</span>
         
 
           <div>
 
-            <h3 className="text-2xl font-bold text-zinc-800">{item.title}</h3>
+            <h3 className="md:text-2xl text-xl font-bold text-zinc-800">{item.title}</h3>
             <p className="text-zinc-600">{item.para}</p>
 
           </div>
@@ -38,7 +38,7 @@ const Process = () => {
 
   return (
     <section>
-      <div className="max-w-[1400px] mx-auto px-10 py-20">
+      <div className="max-w-[1400px] mx-auto px-10 md:py-20 py-14">
 
         <div className="w-fit mr-auto">
 
@@ -46,7 +46,7 @@ const Process = () => {
 
         </div>
 
-        <div className="flex mt-20 pt-50 gap-5 justify-between">{renderSteps}</div>
+        <div className="flex flex-wrap md:mt-20 mt-15 md:pt-50 md:gap-5 gap-y-10 justify-between">{renderSteps}</div>
 
       </div>
     </section>
