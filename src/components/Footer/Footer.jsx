@@ -63,9 +63,9 @@ const Footer = () => {
             </li>
             <div className="flex justify-between p-1 mt-6 border-none bg-white rounded-xl ">
             <input
-              type="text"
-              name="text"
-              id="text"
+              type="email"
+              name="email"
+              id="email"
               placeholder="Enter email..."
               className="flex h-[5vh] px-3 focus:outline-none"
             />
