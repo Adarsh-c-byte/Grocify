@@ -17,12 +17,12 @@ const Testimonial = () => {
       <div>
         <Headings highlight="Customers" headings=" Saying" />
 
-        <div className="flex justify-end py-5 gap-x-3">
-          <button className="custom-prev bg-zinc-200 h-11 w-11 rounded-lg flex justify-center items-center text-3xl text-zinc-800 hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer">
+        <div className="flex justify-end mt-5 py-5 md:gap-x-3 gap-x-4">
+          <button className="custom-prev bg-zinc-200 md:h-11 md:w-11 h-9 w-9 rounded-lg flex justify-center items-center md:text-3xl text-2xl text-zinc-800 hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer">
             <FaAngleLeft />
           </button>
 
-          <button className="custom-next bg-zinc-200 h-11 w-11 rounded-lg flex justify-center items-center text-3xl text-zinc-800 hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer">
+          <button className="custom-next bg-zinc-200 md:h-11 md:w-11 h-9 w-9 rounded-lg flex justify-center items-center md:text-3xl text-2xl text-zinc-800 hover:bg-gradient-to-b hover:from-orange-400 hover:to-orange-500 hover:text-white cursor-pointer">
             <FaAngleRight />
           </button>
         </div>
