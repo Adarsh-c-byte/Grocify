@@ -3,6 +3,7 @@ import Headings from "../Headings/Headings";
 import ProductList from "../ProductList/ProductList";
 import Card from "../Card/Card";
 import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const categories = ["All", "Fruit", "Vegetable", "Dairy", "Sea Food"];
@@ -47,7 +48,7 @@ const Products = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-15">{renderCard}</div>
 
         <div className="mt-15 mx-auto w-fit">
-          <Button content="View All" />
+          <Link to = "/allproducts" className="bg-gradient-to-b from-orange-400 to-orange-500 text-white md:text-lg text-md md:px-8 md:py-3 px-5 py-2 rounded-lg hover:scale-105 transition-all duration-300 hover:to-orange-600 cursor-pointer">Viwe All</Link>
         </div>
       </div>
     </section>

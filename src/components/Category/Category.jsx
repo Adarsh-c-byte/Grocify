@@ -3,7 +3,7 @@ import Headings from "../Headings/Headings";
 import fruitCat from "../../assets/fruits-and-veggies.png";
 import dairyEggs from "../../assets/dairy-and-eggs.png";
 import meatSeafood from "../../assets/meat-and-seafood.png";
-import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   const renderCard = category.map((Card) => {
@@ -20,7 +20,7 @@ const Category = () => {
         <div className="bg-zinc-200 pt-17 p-8 rounded-xl">
           <h3 className="md:text-3xl text-2xl text-zinc-800 font-bold">{Card.title}</h3>
           <p className="text-zinc-500 md:mt-5 mt-3 md:mb-10 mb-7">{Card.discription}</p>
-          <Button content="View All" />
+          <Link to = {Card.path} className="bg-gradient-to-b from-orange-400 to-orange-500 text-white md:text-lg text-md md:px-8 md:py-3 px-5 py-2 rounded-lg hover:scale-105 transition-all duration-300 hover:to-orange-600 cursor-pointer">Viwe All</Link>
         </div>
       </div>
     );
@@ -47,6 +47,7 @@ const category = [
     discription:
       "Fresh, organic produce sourced daily fromlocal farms. Explore awide range of seasonal fruts and crisp vegetbles.",
     img: fruitCat,
+    path : "/fruits"
   },
   {
     id: 2,
@@ -54,6 +55,7 @@ const category = [
     discription:
       "Wholesome dairy products and free-range eggs. From creamy milk and yogort to artisanal cheeses.",
     img: dairyEggs,
+    path: "/dairy"
   },
   {
     id: 3,
@@ -61,5 +63,6 @@ const category = [
     discription:
       "High qulity , responsibly sourced meat and seafod. Choodse from fresh cuts , marinated options, and More.",
     img: meatSeafood,
+    path: "/seafood"
   },
 ];
