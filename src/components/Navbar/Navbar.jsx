@@ -4,6 +4,7 @@ import { ShoppingCart } from "lucide-react";
 import { Search } from "lucide-react";
 import { Menu } from "lucide-react";
 import { Logs } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMenu, setShowMen] = useState(false);
@@ -26,9 +27,9 @@ const Navbar = () => {
       <nav className=" max-w-[1400px] mx-auto px-10 md:h-[14vh] h-[12vh] items-center flex justify-between">
         {/* logo */}
 
-        <a href="#" className="text-3xl font-bold">
+        <Link to="/" className="text-3xl font-bold">
           Gr<span className="text-orange-600 uppercase">o</span>cify
-        </a>
+        </Link>
 
         {/* Desktop menu */}
 
